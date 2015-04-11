@@ -10,6 +10,10 @@ def readme():
     except (IOError, OSError):
         return ''
 
+tests_require = {
+    'pytest >= 2.7.0',
+}
+
 setup(
     name='chatterbox',
     version='0.0.0',
@@ -20,6 +24,10 @@ setup(
     url='https://github.com/item4/chatterbox',
     license='MIT License',
     packages=find_packages(exclude=['tests']),
+    tests_require=tests_require,
+    extras_require={
+        'tests': tests_require,
+    },
     classifiers=[
         'Development Status :: 1 - Planning',
         'License :: OSI Approved :: MIT License',
