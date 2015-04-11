@@ -15,7 +15,7 @@ class Service(enum.Enum):
 
 
 def is_valid_port(port: int) -> bool:
-    return 1 < port < 65535
+    return 0 < port < 65536
 
 
 def is_alphanumeric(value: str) -> bool:
