@@ -56,3 +56,8 @@ target/
 # IntelliJ / PyCharm
 .idea
 chatterbox.iml
+
+# Configuration
+
+*.cfg.py
+*.cfg.yml
