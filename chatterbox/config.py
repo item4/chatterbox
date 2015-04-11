@@ -5,7 +5,7 @@ import sys
 
 __all__ = ('ConfigField', 'Service', 'is_alphanumeric', 'is_valid_port',
            'irc_config_fields', 'load_config', 'load_config_from_py',
-           'validate_config')
+           'preprocess_config', 'validate_connections')
 
 ConfigField = collections.namedtuple('Config', ['name', 'type', 'validator'])
 
