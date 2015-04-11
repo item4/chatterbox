@@ -78,7 +78,7 @@ def validate_connections(value: dict):
     try:
         service_type = value['TYPE']
     except KeyError:
-        print('Service type must be set!', file=sys.stderr)
+        print('Need service type', file=sys.stderr)
         raise SystemExit(1)
 
     if service_type not in Service.__members__.values():
