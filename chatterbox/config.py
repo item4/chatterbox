@@ -109,3 +109,5 @@ def validate_connections(value: dict):
             print('Value of {} is invalid.'.format(name),
                   file=sys.stderr)
             raise SystemExit(1)
+
+    return True
