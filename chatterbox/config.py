@@ -46,7 +46,7 @@ def load_config(file: pathlib.Path) -> dict:
         print('This input is not supported!', file=sys.stderr)
         raise SystemExit(1)
 
-    return validate_config(config)
+    return preprocess_config(config)
 
 
 def load_config_from_py(file: pathlib.Path) -> dict:
@@ -56,7 +56,7 @@ def load_config_from_py(file: pathlib.Path) -> dict:
     return config
 
 
-def validate_config(config: dict) -> dict:
+def preprocess_config(config: dict) -> dict:
     res = {}
     for key, value in config.items():
         if not key.isupper():
